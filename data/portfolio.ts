@@ -107,11 +107,11 @@ export const projects = [
     title: 'Casino Games & Games SDK',
     icon: 'Gamepad2',
     description:
-      'Frontends for online slot and casino games across multiple gaming brands, plus work on a shared games SDK used to build and ship new titles faster.', // TODO: confirm / add details
+      'Frontends for slotGPT — an AI slot generator whose games launch on Stake — and other slot and casino titles, plus work on a shared games SDK used to build and ship new games faster.', // TODO: confirm / add details
     tags: ['iGaming', 'Game UI', 'SDK'], // TODO: real tech stack
-    live: '',
+    live: 'https://www.slotgpt.com',
     code: '',
-    image: '',
+    image: 'projects/slotgpt.jpg',
     private: true,
     accent: 'from-indigo-500/40 to-blue-500/20',
   },
@@ -125,17 +125,6 @@ export const projects = [
     code: 'https://github.com/udayaa11/affiliate',
     image: '',
     accent: 'from-cyan-500/40 to-sky-500/20',
-  },
-  {
-    title: 'Personal Portfolio v1',
-    icon: 'UserRound',
-    description:
-      'My earlier personal portfolio built with Nuxt and Tailwind, deployed on Vercel — the starting point for the site you are looking at now.',
-    tags: ['Nuxt 3', 'Tailwind', 'Vercel'],
-    live: 'https://latest-protofilo.vercel.app',
-    code: 'https://github.com/udayaa11/latestProtofilo',
-    image: '',
-    accent: 'from-amber-500/40 to-orange-500/20',
   },
 ]
 

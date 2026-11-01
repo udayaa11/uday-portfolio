@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { ArrowUpRight, CodeXml, Coins, Dices, Gamepad2, Github, Handshake, Lock, UserRound } from 'lucide-vue-next'
+import { ArrowUpRight, CodeXml, Coins, Dices, Gamepad2, Github, Handshake, Lock } from 'lucide-vue-next'
 import { projects, profile } from '~/data/portfolio'
 
-const icons = { CodeXml, Coins, Dices, Gamepad2, Handshake, UserRound } as const
+const icons = { CodeXml, Coins, Dices, Gamepad2, Handshake } as const
 
 // First project is featured full-width; the last one also goes full-width
 // if it would otherwise sit alone on its row.
