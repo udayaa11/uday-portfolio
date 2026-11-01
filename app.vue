@@ -6,7 +6,7 @@
       <AboutSection />
       <SkillsSection />
       <ProjectsSection />
-      <ServicesSection />
+      <!-- <ServicesSection /> -->
       <ExperienceSection />
       <ContactSection />
     </main>
