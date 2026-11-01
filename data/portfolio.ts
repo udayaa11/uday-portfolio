@@ -116,14 +116,14 @@ export const projects = [
     accent: 'from-indigo-500/40 to-blue-500/20',
   },
   {
-    title: 'Affiliate Program Platform',
+    title: 'ReelBet Partners — Affiliate Platform',
     icon: 'Handshake',
     description:
-      'Marketing site for an affiliate program — commission plans, partner brands, supported platforms, testimonials, news, a support hub and FAQ, with a responsive sidebar navigation for mobile.',
+      'Affiliate program website for ReelBet Partners — commission plans, partner brands, supported platforms, testimonials, news, a support hub and FAQ, with a responsive sidebar navigation for mobile.',
     tags: ['Nuxt 3', 'Vue 3', 'Pinia', 'Tailwind', 'Splide'],
-    live: '', // TODO: add the live URL if it's public
+    live: 'https://reelbetpartners.com'
     code: 'https://github.com/udayaa11/affiliate',
-    image: '',
+    image: 'projects/reelbet-partners.jpg',
     accent: 'from-cyan-500/40 to-sky-500/20',
   },
 ]
