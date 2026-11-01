@@ -1,6 +1,12 @@
 <script setup lang="ts">
-import { ArrowUpRight, Github, Lock } from 'lucide-vue-next'
+import { ArrowUpRight, CodeXml, Coins, Dices, Gamepad2, Github, Handshake, Lock, UserRound } from 'lucide-vue-next'
 import { projects, profile } from '~/data/portfolio'
+
+const icons = { CodeXml, Coins, Dices, Gamepad2, Handshake, UserRound } as const
+
+// First project is featured full-width; the last one also goes full-width
+// if it would otherwise sit alone on its row.
+const isWide = (i: number) => i === 0 || (i === projects.length - 1 && projects.length % 2 === 0)
 </script>
 
 <template>
@@ -23,29 +29,26 @@ import { projects, profile } from '~/data/portfolio'
           :key="p.title"
           v-reveal="i === 0 ? 0 : ((i + 1) % 2) * 120"
           class="card card-hover group flex flex-col overflow-hidden"
-          :class="i === 0 && 'md:col-span-2'"
+          :class="isWide(i) && 'md:col-span-2'"
         >
           <!-- preview -->
-          <div class="relative aspect-[16/10] overflow-hidden border-b border-white/[0.06] bg-ink-900" :class="i === 0 && 'md:aspect-[21/8]'">
+          <div class="relative aspect-[16/10] overflow-hidden border-b border-white/[0.06] bg-ink-900" :class="isWide(i) && 'md:aspect-[21/8]'">
             <img
               v-if="p.image"
               :src="p.image"
               :alt="`${p.title} screenshot`"
               loading="lazy"
-              class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+              class="h-full w-full object-cover object-top transition duration-700 group-hover:scale-105"
             />
             <div v-else class="absolute inset-0 bg-gradient-to-br" :class="p.accent">
-              <!-- mock browser UI as placeholder -->
-              <div class="absolute inset-x-8 bottom-0 top-10 rounded-t-xl border border-white/10 bg-ink-950/80 p-4 shadow-2xl transition duration-500 group-hover:-translate-y-2">
-                <div class="mb-4 flex gap-1.5">
-                  <span class="h-2 w-2 rounded-full bg-white/20" /><span class="h-2 w-2 rounded-full bg-white/20" /><span class="h-2 w-2 rounded-full bg-white/20" />
-                </div>
-                <div class="mb-3 h-3 w-2/3 rounded bg-white/15" />
-                <div class="mb-6 h-3 w-1/3 rounded bg-white/10" />
-                <div class="grid grid-cols-3 gap-3">
-                  <div class="h-16 rounded-lg bg-white/[0.07]" />
-                  <div class="h-16 rounded-lg bg-white/[0.07]" />
-                  <div class="h-16 rounded-lg bg-white/[0.07]" />
+              <!-- drawn cover for projects without a public screenshot -->
+              <div class="grid-bg absolute inset-0 opacity-60" />
+              <div class="absolute inset-0 grid place-items-center">
+                <div class="flex flex-col items-center gap-5 transition duration-500 group-hover:-translate-y-1.5">
+                  <div class="grid h-20 w-20 place-items-center rounded-2xl border border-white/15 bg-white/10 text-white shadow-2xl backdrop-blur-md transition duration-500 group-hover:rotate-6 group-hover:scale-110">
+                    <component :is="icons[p.icon as keyof typeof icons] ?? CodeXml" :size="36" :stroke-width="1.5" />
+                  </div>
+                  <span class="font-display text-lg font-semibold tracking-tight text-white/90 sm:text-2xl">{{ p.title }}</span>
                 </div>
               </div>
             </div>
@@ -59,9 +62,14 @@ import { projects, profile } from '~/data/portfolio'
                 <a v-if="p.live" :href="p.live" target="_blank" rel="noopener" aria-label="Live site" class="grid h-9 w-9 place-items-center rounded-full bg-white text-ink-950 transition hover:rotate-45"><ArrowUpRight :size="16" /></a>
               </div>
             </div>
-            <p v-if="p.private" class="mt-2 inline-flex items-center gap-1.5 text-xs text-zinc-500">
-              <Lock :size="12" /> Private client work
-            </p>
+            <div v-if="p.current || p.private" class="mt-2 flex flex-wrap items-center gap-2">
+              <span v-if="p.current" class="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-2.5 py-0.5 text-xs text-emerald-300">
+                <span class="h-1.5 w-1.5 animate-pulse rounded-full bg-emerald-400" /> Currently working on
+              </span>
+              <span v-if="p.private" class="inline-flex items-center gap-1.5 text-xs text-zinc-500">
+                <Lock :size="12" /> Private client work
+              </span>
+            </div>
             <p class="mt-3 flex-1 leading-relaxed text-zinc-400">{{ p.description }}</p>
             <ul class="mt-6 flex flex-wrap gap-2">
               <li v-for="t in p.tags" :key="t" class="chip">{{ t }}</li>

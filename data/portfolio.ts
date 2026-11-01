@@ -64,31 +64,48 @@ export const skills = [
 ]
 
 // Real projects from github.com/udayaa11. `image` is optional — drop a
-// screenshot into /public/projects/ and set e.g. image: 'projects/aimlabs.png' (no leading slash)
+// screenshot into /public/projects/ and set e.g. image: 'projects/aimlabs.jpg' (no leading slash).
+// Without an image, a cover is drawn using `icon` (a name from components/ProjectsSection.vue).
 export const projects = [
   {
+    title: 'Stake Casino Games',
+    icon: 'Dices',
+    description:
+      'Currently building slot and casino game frontends for Stake at Aimlabs — game UI, animations and responsive layouts that run smoothly on mobile and desktop.', // TODO: confirm / add what you built
+    tags: ['iGaming', 'Game UI', 'Animations'], // TODO: real tech stack
+    live: '',
+    code: '',
+    image: '',
+    private: true,
+    current: true,
+    accent: 'from-emerald-500/40 to-green-500/20',
+  },
+  {
     title: 'Aimlabs Company Website',
+    icon: 'CodeXml',
     description:
       'Official multi-page website for Aimlabs — About Us (mission, vision, team), services, products, a careers section with dynamic job-role pages, and a contact form. Built with reusable components and touch-friendly carousels.',
     tags: ['Nuxt 3', 'Vue 3', 'Pinia', 'Tailwind', 'Splide', 'Bun'],
-    live: '', // TODO: add the live URL if it's public
+    live: 'https://www.aimlabs.in',
     code: 'https://github.com/udayaa11/aimlabs-website',
-    image: '',
+    image: 'projects/aimlabs.jpg',
     accent: 'from-violet-500/40 to-fuchsia-500/20',
   },
   {
     title: 'LuckyReels Gaming Platform',
+    icon: 'Coins',
     description:
       'Player-facing web platform for the LuckyReels gaming brand — game lobby, responsive layouts and UI built to stay smooth on mobile and desktop.', // TODO: confirm / add what you built
     tags: ['iGaming', 'Web app', 'Responsive UI'], // TODO: real tech stack
-    live: '', // TODO: live URL if public
+    live: 'https://luckyreels.com',
     code: '',
-    image: '',
+    image: 'projects/luckyreels.jpg',
     private: true,
     accent: 'from-rose-500/40 to-pink-500/20',
   },
   {
     title: 'Casino Games & Games SDK',
+    icon: 'Gamepad2',
     description:
       'Frontends for online slot and casino games across multiple gaming brands, plus work on a shared games SDK used to build and ship new titles faster.', // TODO: confirm / add details
     tags: ['iGaming', 'Game UI', 'SDK'], // TODO: real tech stack
@@ -100,6 +117,7 @@ export const projects = [
   },
   {
     title: 'Affiliate Program Platform',
+    icon: 'Handshake',
     description:
       'Marketing site for an affiliate program — commission plans, partner brands, supported platforms, testimonials, news, a support hub and FAQ, with a responsive sidebar navigation for mobile.',
     tags: ['Nuxt 3', 'Vue 3', 'Pinia', 'Tailwind', 'Splide'],
@@ -110,6 +128,7 @@ export const projects = [
   },
   {
     title: 'Personal Portfolio v1',
+    icon: 'UserRound',
     description:
       'My earlier personal portfolio built with Nuxt and Tailwind, deployed on Vercel — the starting point for the site you are looking at now.',
     tags: ['Nuxt 3', 'Tailwind', 'Vercel'],
@@ -157,7 +176,7 @@ export const experience = [
     company: 'Aimlabs Private Limited',
     period: '4+ years · Present', // TODO: e.g. 'Jun 2022 — Present' once you confirm the start month
     description:
-      "Building production frontends across Aimlabs' products and client platforms — the official company website, iGaming platforms such as LuckyReels, online slot and casino game frontends, a shared games SDK, affiliate portals and internal product UIs.",
+      "Building production frontends across Aimlabs' products and client platforms — currently slot and casino games for Stake, plus the official company website, iGaming platforms such as LuckyReels, online slot and casino game frontends, a shared games SDK, affiliate portals and internal product UIs.",
     tags: ['Vue 3', 'Nuxt 3', 'Svelte', 'TypeScript', 'Tailwind', 'Pinia'],
   },
 ]
