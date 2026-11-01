@@ -34,7 +34,7 @@ export const about = {
   paragraphs: [
     "I'm a frontend developer who cares about the details — clean code, smooth interactions and pages that feel fast on every device.",
     'Over the last 4+ years I have built dashboards, marketing sites and product UIs using Vue, Nuxt, Svelte and TypeScript. I enjoy turning a rough idea or a Figma file into a polished, production-ready website.',
-    'Today I work with founders and businesses as a freelancer, taking projects from design to deployment with clear communication along the way.',
+    'I work full-time as a Frontend Developer at Aimlabs Private Limited, and I also take on select freelance projects — taking them from design to deployment with clear communication along the way.',
   ],
   highlights: [
     'Pixel-perfect from Figma',
@@ -151,14 +151,13 @@ export const services = [
   },
 ]
 
-// TODO: add your real jobs here (company, role, dates) — newest first
 export const experience = [
   {
-    role: 'Freelance Frontend Developer',
-    company: 'Self-employed',
-    period: 'Present',
+    role: 'Frontend Developer',
+    company: 'Aimlabs Private Limited',
+    period: '4+ years · Present', // TODO: e.g. 'Jun 2022 — Present' once you confirm the start month
     description:
-      'Building landing pages, business websites and web apps for clients using Nuxt, Vue and Svelte.',
-    tags: ['Nuxt 3', 'Svelte', 'Tailwind'],
+      "Building production frontends across Aimlabs' products and client platforms — the official company website, iGaming platforms such as LuckyReels, online slot and casino game frontends, a shared games SDK, affiliate portals and internal product UIs.",
+    tags: ['Vue 3', 'Nuxt 3', 'Svelte', 'TypeScript', 'Tailwind', 'Pinia'],
   },
 ]

@@ -8,7 +8,7 @@ import { experience } from '~/data/portfolio'
       <SectionHeading
         eyebrow="Experience"
         title="Where I've worked"
-        subtitle="4+ years building production frontends for products and clients."
+        subtitle="4+ years at Aimlabs Private Limited, building production frontends for products and clients."
       />
 
       <ol class="relative ml-2 border-l border-white/10 sm:ml-4">
