@@ -121,7 +121,7 @@ export const projects = [
     description:
       'Affiliate program website for ReelBet Partners — commission plans, partner brands, supported platforms, testimonials, news, a support hub and FAQ, with a responsive sidebar navigation for mobile.',
     tags: ['Nuxt 3', 'Vue 3', 'Pinia', 'Tailwind', 'Splide'],
-    live: 'https://reelbetpartners.com'
+    live: 'https://reelbetpartners.com',
     code: 'https://github.com/udayaa11/affiliate',
     image: 'projects/reelbet-partners.jpg',
     accent: 'from-cyan-500/40 to-sky-500/20',
