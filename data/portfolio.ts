@@ -166,6 +166,6 @@ export const experience = [
     period: '4+ years · Present', // TODO: e.g. 'Jun 2022 — Present' once you confirm the start month
     description:
       "Building production frontends across Aimlabs' products and client platforms — currently slot and casino games for Stake, plus the official company website, iGaming platforms such as LuckyReels, online slot and casino game frontends, a shared games SDK, affiliate portals and internal product UIs.",
-    tags: ['Vue 3', 'Nuxt 3', 'Svelte', 'TypeScript', 'Tailwind', 'Pinia'],
+    tags: ['Vue 3', 'Nuxt 3', 'Svelte', 'PixiJS', 'TypeScript', 'Tailwind', 'Pinia'],
   },
 ]
