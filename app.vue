@@ -2,13 +2,7 @@
   <div class="relative overflow-x-clip">
     <SiteNav />
     <main>
-      <HeroSection />
-      <AboutSection />
-      <SkillsSection />
-      <ProjectsSection />
-      <!-- <ServicesSection /> -->
-      <ExperienceSection />
-      <ContactSection />
+      <NuxtPage />
     </main>
     <SiteFooter />
   </div>
